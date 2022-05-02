@@ -16,7 +16,7 @@ def BuildAntiTestSetForUser(testSubject, trainset):
     return anti_testset
 
 # Pick an arbitrary test subject
-testSubject = 85
+testSubject = 8
 
 ml = MovieLens()
 
@@ -27,6 +27,7 @@ userRatings = ml.getUserRatings(testSubject)
 loved = []
 hated = []
 for ratings in userRatings:
+    print(ratings)
     if (float(ratings[1]) > 4.0):
         loved.append(ratings)
     if (float(ratings[1]) < 3.0):
